@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "./Album.css"
 
 
 const url = "https://jsonplaceholder.typicode.com/albums"
@@ -35,6 +36,7 @@ export default function Album(){
     const handleSubmit = (e) => {
         e.preventDefault()
         setNumber(entrada)
+        setEntrada("")
 
     }
 
@@ -47,8 +49,8 @@ export default function Album(){
         <div>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Id:
-                    <input type="number" onChange={(e) => setEntrada(e.target.value)}/>
+                    <span>Id:</span>
+                    <input type="number" onChange={(e) => setEntrada(e.target.value)} value={entrada}/>
                 </label>
                 <button>Enviar</button>
             </form>
@@ -56,7 +58,7 @@ export default function Album(){
             <div>
                 <ul>
                     {
-                        albuns.filter(album => album.id == number).map((album, i) => {
+                        albuns.filter(album => album.userId  == number).map((album, i) => {
                             return <li key={album.id}>{album.title}</li>
                         })
                     }

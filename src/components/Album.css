@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  form {
+    flex-direction: column;
+  }
+
+  form label {
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 4px;
+    margin-left: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
